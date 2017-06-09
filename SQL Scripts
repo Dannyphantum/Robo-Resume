@@ -1,0 +1,27 @@
+create schema roboresume;
+
+create table person(
+pid integer unique,
+firstname varchar(20),
+lastname varchar(20),
+email varchar(40)
+);
+
+create table education(
+pid integer,
+school varchar(50),
+degree varchar(20),
+gradyear int
+);
+
+create table experience(
+pid integer,
+jobname varchar(20),
+duty1 varchar(50),
+duty2 varchar(50)
+);
+
+create table skills(
+skillname varchar(20),
+skill_level varchar(10)
+);
