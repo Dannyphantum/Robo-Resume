@@ -19,15 +19,15 @@ private static void print(String p){
 		String userChoice = "";
 		int count = 0;
 		
-		//SkillsRating skill = new SkillsRating();
-		RoboSkill rskill = new RoboSkill();
-		RoboRating rrate = new RoboRating();
+		RoboSkill skill = new RoboSkill();
+		//RoboSkill rskill = new RoboSkill();
+		//RoboRating rrate = new RoboRating();
 		
 		do{
 		print("Enter your Skills.");
 		Scanner scan = new Scanner(System.in);
 		String userSkill = scan.nextLine();
-		rskill.setSkill(userSkill);
+		skill.setSkill(userSkill);
 		//rrating.setRating()
 		
 		print("Enter your Rating for this Skill.");

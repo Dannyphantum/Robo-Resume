@@ -13,6 +13,7 @@ public class RoboResumeApp {
 		
 		RoboResumeBuild rBuild = new RoboResumeBuild();
 		RoboSkillRating rSkillRating = new RoboSkillRating();
+		RoboSkill rSkill = new RoboSkill();
 		//ArrayList<String> SkillsList = new ArrayList<String>();
 		
 		//Prompt and Record name.
@@ -26,7 +27,7 @@ public class RoboResumeApp {
 		String userEmail = email.nextLine();
 		
 		rBuild.ResumeSkills();
-		rSkillRating.addskill();
+		//rSkillRating.addskill();
 		//rBuild.ResumeEducation();
 		
 		//Prints resume
@@ -53,7 +54,7 @@ public class RoboResumeApp {
 	
 				
 		print("SKILLS:");
-		addskill.forEach(System.out::println);
+		rSkill.roboskill.forEach(System.out::println);
 		
 
 	}
