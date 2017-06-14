@@ -11,6 +11,9 @@ public class RoboResumeApp {
 
 	public static void main(String[] args) {
 		
+		RoboResumeBuild rBuild = new RoboResumeBuild();
+		RoboSkillRating rSkillRating = new RoboSkillRating();
+		//ArrayList<String> SkillsList = new ArrayList<String>();
 		
 		//Prompt and Record name.
 		print("Enter your name.");
@@ -22,6 +25,10 @@ public class RoboResumeApp {
 		Scanner email = new Scanner(System.in);
 		String userEmail = email.nextLine();
 		
+		rBuild.ResumeSkills();
+		rSkillRating.addskill();
+		//rBuild.ResumeEducation();
+		
 		//Prints resume
 		print("NAME:");
 		print(userName);
@@ -30,17 +37,23 @@ public class RoboResumeApp {
 		print("EMAIL:");
 		print(userEmail);
 		print("");
-				
+		
+		/*
 		print("ACHIEVEMENTS:");
 		userAchievements.forEach(System.out::println);
 		print("");
-				
+		*/
+	
+			
+		/*
 		print("JOBS:");
-		jobList.forEach(System.out::println);
+		SkillsList.forEach(System.out::println);
 		print("");
+	*/	
+	
 				
 		print("SKILLS:");
-		SkillsList.forEach(System.out::println);
+		addskill.forEach(System.out::println);
 		
 
 	}

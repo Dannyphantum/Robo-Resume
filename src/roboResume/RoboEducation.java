@@ -2,7 +2,16 @@ package roboResume;
 
 public class RoboEducation {
 
-	public String school(){
-		return "Enter Educational Acheivements.";
+	private String School;
+
+	public String getSchool() {
+		return School;
 	}
+
+	public void setSchool(String userSchool) {
+		this.School = userSchool;
+	}
+	
+	
 }
+

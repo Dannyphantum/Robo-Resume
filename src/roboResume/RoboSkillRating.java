@@ -14,16 +14,21 @@ public class RoboSkillRating {
 		
 		//Prompt and Record Skills and Ratings
 				RoboSkill rskill = new RoboSkill();
-				RoboRating rrating = new RoboRating();
+				
 				ArrayList<String> SkillsList = new ArrayList<String>();
 				SkillsList.add(rskill.getSkill());
-				SkillsList.add(rrating.getRating());
-				
-				 
-
+			
 		//return "Enter your Skills and Rating. (Skill, Rating)";
 				 return SkillsList;
 	}
 	
+	public ArrayList<String> addrate(){
+		
+		RoboRating rrating = new RoboRating();
+		
+		ArrayList<String> RatingsList = new ArrayList<String>();
+		RatingsList.add(rrating.getRating());
+		return RatingsList;
+	}
 	
 }

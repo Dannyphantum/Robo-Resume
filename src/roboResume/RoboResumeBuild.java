@@ -12,16 +12,16 @@ private static void print(String p){
 		System.out.println(p);
 	}
 		
-	
-		
+
 	
 	public void ResumeSkills(){
 		
 		String userChoice = "";
 		int count = 0;
 		
-		SkillsRating skill = new SkillsRating();
+		//SkillsRating skill = new SkillsRating();
 		RoboSkill rskill = new RoboSkill();
+		RoboRating rrate = new RoboRating();
 		
 		do{
 		print("Enter your Skills.");
@@ -29,6 +29,11 @@ private static void print(String p){
 		String userSkill = scan.nextLine();
 		rskill.setSkill(userSkill);
 		//rrating.setRating()
+		
+		print("Enter your Rating for this Skill.");
+		Scanner rate = new Scanner(System.in);
+		String userRating = rate.next();
+		rrate.setRating(userRating);
 		
 		print("Would you like to add more?");
 		Scanner choice = new Scanner(System.in);
@@ -42,14 +47,15 @@ private static void print(String p){
 		String userChoice = "";
 		int count = 0;
 		
-		Education e = new Education();
-		
+		//Education e = new Education();
+		RoboEducation rSchool = new RoboEducation();
 		
 		do{
-		print(e.school());
+		print("Enter your Educational Achievements.");
 		Scanner school = new Scanner(System.in);
 		String userSchool = school.nextLine();
-		userAchievements.add(userSchool);
+		rSchool.setSchool(userSchool);
+		
 		print("Would you like to add more?");
 		Scanner choice = new Scanner(System.in);
 		userChoice = choice.nextLine();
@@ -68,7 +74,18 @@ private static void print(String p){
 		print("Enter your Job.");
 		Scanner job = new Scanner(System.in);
 		String userJob = job.nextLine();
-		jobList.add(userJob);
+		w.setJob(userJob);
+		
+		print("Enter your First Duty.");
+		Scanner d1 = new Scanner(System.in);
+		String firstDuty = d1.nextLine();
+		w.setDutyOne(firstDuty);
+		
+		print("Enter your Second Duty.");
+		Scanner d2 = new Scanner(System.in);
+		String secondDuty = d2.nextLine();
+		w.setDutyTwo(secondDuty);
+		
 		print("Would you like to add more");
 		Scanner choice = new Scanner(System.in);
 		userChoice = choice.nextLine();
