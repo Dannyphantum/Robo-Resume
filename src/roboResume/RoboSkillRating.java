@@ -3,7 +3,6 @@ package roboResume;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import resume.SkillsRating;
 
 public class RoboSkillRating  {
 
@@ -15,8 +14,6 @@ public class RoboSkillRating  {
 		 rskill = new RoboSkill();
 		 rrate = new RoboRating();
 	}
-	
-	
 	
 	public ArrayList<String> addskill(){
 		

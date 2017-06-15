@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class RoboWork {
 
+	
 	private String Job;
 
 	public String getJob() {
@@ -12,8 +13,8 @@ public class RoboWork {
 
 	public void setJob(String job) {
 		this.Job = job;
+		
 	}
-	
 	
 	private String DutyOne;
 	
@@ -25,7 +26,6 @@ public class RoboWork {
 		this.DutyOne = dutyOne;
 	}
 
-	
 	private String DutyTwo;
 	
 	public String getDutyTwo() {
@@ -36,13 +36,15 @@ public class RoboWork {
 		this.DutyTwo = dutyTwo;
 	}
 	
-	public ArrayList<String> addJob(){
+	
+	
+	/*public RoboWork(){
 		
 	ArrayList<String> jobList = new ArrayList<String>();
 		jobList.add(getJob());
 		jobList.add(getDutyOne());
 		jobList.add(getDutyTwo());
-		return jobList;
+		//return jobList;
 	
-	}
+	}*/
 }

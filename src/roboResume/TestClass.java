@@ -1,3 +1,4 @@
+/*
 package roboResume;
 
 import java.util.ArrayList;
@@ -37,8 +38,11 @@ public class TestClass {
 		} while (userChoice.equals("Y") && count <= 20 && count >= 1);
 		
 		
-	}
-	private static void print(String p){
-		System.out.println(p);
-	}
+	
+	
 }
+private static void print(String p){
+	System.out.println(p);
+}
+}
+*/

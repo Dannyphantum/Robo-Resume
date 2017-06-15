@@ -2,9 +2,6 @@ package roboResume;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import resume.Education;
-import resume.SkillsRating;
-import resume.Work;
 
 public class RoboResumeBuild {
 
@@ -19,15 +16,17 @@ private static void print(String p){
 		String userChoice = "";
 		int count = 0;
 		
-		RoboSkill skill = new RoboSkill();
+		//RoboSkill skill = new RoboSkill();
 		//RoboSkill rskill = new RoboSkill();
-		//RoboRating rrate = new RoboRating();
+		RoboRating rrate = new RoboRating();
+		RoboResumeApp rrApp = new RoboResumeApp();
 		
 		do{
 		print("Enter your Skills.");
 		Scanner scan = new Scanner(System.in);
-		String userSkill = scan.nextLine();
-		skill.setSkill(userSkill);
+		String test = scan.nextLine();
+		//skill.setSkill(userSkill);
+		
 		//rrating.setRating()
 		
 		print("Enter your Rating for this Skill.");
