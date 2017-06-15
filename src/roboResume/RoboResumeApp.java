@@ -20,16 +20,22 @@ public class RoboResumeApp {
 		ArrayList<String> userAchievements = new ArrayList<String>();
 		ArrayList<String> userSkills = new ArrayList<String>(); 
 		ArrayList<String> userRates = new ArrayList<String>();
+		
 		//Prompt and Record name.
 		print("Enter your name.");
 		Scanner name = new Scanner(System.in);
 		String userName = name.nextLine();
+		
 		
 		//Prompt and Record email.
 		print("Enter your email.");
 		Scanner email = new Scanner(System.in);
 		String userEmail = email.nextLine();
 		
+		//Creating needed variables.
+		String userSchool = "";
+		String userJob = "";
+		String userSkill = "";
 		//Set user prompt to continue input to blank.
 		String userChoice = "";
 		int count = 0;
@@ -38,7 +44,7 @@ public class RoboResumeApp {
 	do{
 		print("Enter your Educational Achievements.");
 		Scanner school = new Scanner(System.in);
-		String userSchool = school.nextLine();
+		userSchool = school.nextLine();
 		rSchool.setSchool(userSchool);
 		userAchievements.add(userSchool);
 		
@@ -55,7 +61,7 @@ public class RoboResumeApp {
 	do{
 		print("Enter your Job.");
 		Scanner job = new Scanner(System.in);
-		String userJob = job.nextLine();
+		userJob = job.nextLine();
 		work.setJob(userJob);
 		jobList.add(userJob);
 		
@@ -81,7 +87,7 @@ public class RoboResumeApp {
 	do{
 		print("Enter your Skills.");
 		Scanner scan = new Scanner(System.in);
-		String userSkill = scan.nextLine();
+		userSkill = scan.nextLine();
 		rSkill.setSkill(userSkill);
 		userSkills.add(userSkill);
 		
@@ -97,8 +103,15 @@ public class RoboResumeApp {
 		count++;
 	} while (userChoice.equals("Y") && count <= 20 && count >= 1);
 
-	//userSkills.addAll(userRates);
+
+		
+	//Create connection to database instance.
+	DBconnection connect = new DBconnection();
 	
+	connect.addRecord("userInfo", "username", "email", "education", "workExperience", "skill", 
+			userName, userEmail, userSchool, userJob, userSkill);
+
+		/*
 		//Prints resume
 		print("NAME:");
 		print(userName);
@@ -120,7 +133,7 @@ public class RoboResumeApp {
 		print("SKILLS:");
 		userSkills.forEach(System.out::println);
 		
-		
+		*/
 		
 
 	}
